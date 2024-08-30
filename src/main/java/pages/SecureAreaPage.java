@@ -10,7 +10,6 @@ public class SecureAreaPage {
     public SecureAreaPage(WebDriver driver){
         this.driver = driver;
     }
-
     public String getAlertText(){
         return driver.findElement(alertText).getText();
     }
