@@ -15,7 +15,7 @@ public class KeyPressesTests extends BaseTests {
     }
     @Test
     public void testsPi(){
-//        KeyPressesPage keyPressesPage = homepage.clickKeyPresses();
-//        keyPressesPage.enterPi();
+        KeyPressesPage keyPressesPage = homepage.clickKeyPresses();
+        keyPressesPage.enterPi();
     }
 }

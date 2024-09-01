@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
 
@@ -15,8 +16,8 @@ public class BaseTests {
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
+        goHome();
         driver.manage().window().maximize();
-        driver.get("https://the-internet.herokuapp.com/");
         homepage = new HomePage(driver);
 
 //        driver.manage().window().setSize(new Dimension(400, 900));
@@ -34,6 +35,10 @@ public class BaseTests {
 //        } catch (InterruptedException e){
 //            System.out.println(e);
 //        }
+    }
+    @BeforeMethod
+    public void goHome(){
+        driver.get("https://the-internet.herokuapp.com/");
     }
     @AfterClass
     public void tearDown(){
