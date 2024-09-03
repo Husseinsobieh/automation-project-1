@@ -18,6 +18,9 @@ public class BaseTests {
     public void setup(){
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
+//        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+//        driver.manage().timeouts().getPageLoadTimeout();
+//        driver.manage().timeouts().getScriptTimeout();
         goHome();
         driver.manage().window().maximize();
         homepage = new HomePage(driver);
