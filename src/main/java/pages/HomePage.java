@@ -37,9 +37,9 @@ public class HomePage {
         clickLink("Horizontal Slider");
         return new HorizontalSliderPage(driver);
     }
-    public JavaScriptAlerts clickJavaScriptAlerts(){
+    public JavaScriptAlertsPage clickJavaScriptAlerts(){
         clickLink("JavaScript Alerts");
-        return new JavaScriptAlerts(driver);
+        return new JavaScriptAlertsPage(driver);
     }
     public FileUploadPage clickFileUpload(){
         clickLink("File Upload");
@@ -60,5 +60,17 @@ public class HomePage {
     public DynamicLoadingPage clickDynamicLoading(){
         clickLink("Dynamic Loading");
         return new DynamicLoadingPage(driver);
+    }
+    public LargeAndDeepDOMPage clickLargeAndDeep(){
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDOMPage(driver);
+    }
+    public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+    public MultipleWindowsPage clickMultipleWindows(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
     }
 }
